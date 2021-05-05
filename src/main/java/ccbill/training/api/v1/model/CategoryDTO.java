@@ -1,4 +1,4 @@
-package guru.springfamework.api.v1.model;
+package ccbill.training.api.v1.model;
 
 /**
  * Created by jt on 9/24/17.

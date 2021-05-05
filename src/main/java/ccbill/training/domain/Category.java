@@ -1,4 +1,4 @@
-package guru.springfamework.domain;
+package ccbill.training.domain;
 
 import lombok.Data;
 

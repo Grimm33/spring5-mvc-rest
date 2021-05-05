@@ -1,6 +1,6 @@
-package guru.springfamework.repositories;
+package ccbill.training.repositories;
 
-import guru.springfamework.domain.Category;
+import ccbill.training.domain.Category;
 import org.springframework.data.jpa.repository.JpaRepository;
 
 /**

@@ -1,4 +1,4 @@
-package guru.springfamework.spring5mvcrest;
+package ccbill.training.spring5mvcrest;
 
 import org.junit.Test;
 import org.junit.runner.RunWith;
