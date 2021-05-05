@@ -3,10 +3,12 @@ package ccbill.training.services;
 import ccbill.training.api.v1.mapper.CategoryMapper;
 import ccbill.training.api.v1.model.CategoryDTO;
 import ccbill.training.repositories.CategoryRepository;
+import org.springframework.stereotype.Service;
 
 import java.util.List;
 import java.util.stream.Collectors;
 
+@Service
 public class CategoryServiceImpl implements CategoryService {
 
     private final CategoryMapper categoryMapper;
