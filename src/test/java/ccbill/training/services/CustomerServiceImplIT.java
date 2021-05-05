@@ -6,6 +6,7 @@ import ccbill.training.bootstrap.Bootstrap;
 import ccbill.training.domain.Customer;
 import ccbill.training.repositories.CategoryRepository;
 import ccbill.training.repositories.CustomerRepository;
+import ccbill.training.repositories.VendorRepository;
 import org.junit.Before;
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -29,6 +30,9 @@ public class CustomerServiceImplIT {
     @Autowired
     CategoryRepository categoryRepository;
 
+    @Autowired
+    VendorRepository vendorRepository;
+
     CustomerService customerService;
 
     @Before
@@ -37,7 +41,7 @@ public class CustomerServiceImplIT {
         System.out.println(categoryRepository.findAll().size());
 
         //setup data for testing
-        Bootstrap bootstrap = new Bootstrap(categoryRepository, customerRepository);
+        Bootstrap bootstrap = new Bootstrap(categoryRepository, customerRepository, vendorRepository);
         bootstrap.run();
 
         customerService = new CustomerServiceImpl(CustomerMapper.INSTANCE, customerRepository);
