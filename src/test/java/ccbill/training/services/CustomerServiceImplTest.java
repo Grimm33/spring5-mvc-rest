@@ -2,6 +2,7 @@ package ccbill.training.services;
 
 import ccbill.training.api.v1.mapper.CustomerMapper;
 import ccbill.training.api.v1.model.CustomerDTO;
+import ccbill.training.controllers.v1.CustomerController;
 import ccbill.training.domain.Customer;
 import ccbill.training.repositories.CustomerRepository;
 import org.junit.Before;
@@ -91,7 +92,7 @@ public class CustomerServiceImplTest {
 
         //then
         assertEquals(customerDTO.getFirstName(), savedDto.getFirstName());
-        assertEquals("/api/v1/customers/1", savedDto.getCustomerUrl());
+        assertEquals(CustomerController.BASE_URL + "/1", savedDto.getCustomerUrl());
     }
 
     @Test
@@ -112,7 +113,7 @@ public class CustomerServiceImplTest {
 
         assertEquals(customerDTO.getFirstName(), savedDto.getFirstName());
         assertEquals(customerDTO.getLastName(), savedDto.getLastName());
-        assertEquals("/api/v1/customers/1", savedDto.getCustomerUrl());
+        assertEquals(CustomerController.BASE_URL + "/1", savedDto.getCustomerUrl());
     }
 
     @Test
