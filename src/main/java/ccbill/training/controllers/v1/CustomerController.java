@@ -3,9 +3,12 @@ package ccbill.training.controllers.v1;
 import ccbill.training.api.v1.model.CustomerDTO;
 import ccbill.training.api.v1.model.CustomerListDTO;
 import ccbill.training.services.CustomerService;
+import io.swagger.v3.oas.annotations.Operation;
+import io.swagger.v3.oas.annotations.tags.Tag;
 import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.*;
 
+@Tag(name = "customer-controller", description = "This is my Customer Controller")
 @RestController
 @RequestMapping(CustomerController.BASE_URL)
 public class CustomerController {
@@ -17,6 +20,7 @@ public class CustomerController {
         this.customerService = customerService;
     }
 
+    @Operation(summary = "This lists all customers", description = "Returns list of all customers in system")
     @GetMapping
     @ResponseStatus(HttpStatus.OK)
     public CustomerListDTO getListOfCustomers() {
